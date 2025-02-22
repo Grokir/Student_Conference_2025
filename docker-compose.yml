@@ -1,0 +1,15 @@
+version: "2.1"
+
+services:
+  server:
+    container_name: php_vulnerable_server
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - 80:8080
+      - 21:2121
+    network_mode: bridge
+
+networks:
+  mynetwork:
+    external: true

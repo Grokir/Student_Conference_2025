@@ -1,0 +1,7 @@
+List of flags:
+
+1) Directory_traversal_FLAG: 7616c666f5c61637275667162747f5279646f5078607  -> /etc/passwd
+  // secret phrase - php_dir_traversal_flag
+          
+2)                 RCE_FLAG: 7616c666f5563627f5f647f59666c6f5078607        -> /root/root.txt
+  // secret phrase - php_lfi_to_rce_flag
