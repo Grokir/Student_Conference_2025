@@ -5,7 +5,6 @@ import sys
 
 class CLogger:
   __log_file_path = "/var/log/pyftp/ftp.log"
-  # __log_file_path = "./ftp.log"
   __time_last_write = datetime.now()
 
   def print(self, msg: str):
@@ -48,13 +47,6 @@ class FTPProtocol(protocol.Protocol):
 class FTPFactory(protocol.Factory):
   def buildProtocol(self, addr):
     return FTPProtocol()
-  
-  # def doStart(self):
-  #   return self.startFactory()
-  
-  # def doStop(self):
-  #   return self.stopFactory()
-
 
 
 def main():
@@ -62,7 +54,6 @@ def main():
     print(f"[!] Enter the port : python3 {sys.argv[0]} <port>")
     return
   
-  # log.startLogging(sys.stdout)
   reactor.listenTCP(int(sys.argv[1]), FTPFactory())
   reactor.run()
 
